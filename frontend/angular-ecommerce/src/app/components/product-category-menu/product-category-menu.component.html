@@ -1,0 +1,29 @@
+<div class="menu-sidebar-content js-scrollbar1">
+    <nav class="navbar-sidebar">
+        <ul class="list-unstyled navbar-list">
+
+            <li *ngFor="let tempProductCategory of productCategories">
+
+                <a routerLink="/category/{{ tempProductCategory.id }}" 
+                routerLinkActive="active-link">{{ tempProductCategory.categoryName }}</a> <!--Getting this value from db via spring rest api-->
+            </li>
+
+        </ul>
+    </nav>
+</div>
+
+
+    <!-- Replacing it with new Menu Component: Cut this and move to product-category-menu.html
+    <div class="menu-sidebar-content js-scrollbar1">
+      <nav class="navbar-sidebar">
+        <ul class="list-unstyled navbar-list">
+          <li>
+            <a routerLink="/category/1" routerLinkActive="active-link">Books</a>
+          </li>
+          <li>
+            <a routerLink="/category/2" routerLinkActive="active-link">Coffee Mugs</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  -->
